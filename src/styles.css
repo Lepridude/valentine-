@@ -75,3 +75,8 @@
  .photo-modal-image{height:260px}
 }
 @media(max-width:380px){.photobooth{width:84px}.photobooth-frame{height:80px}.moment-photo{height:135px}}
+
+/* Reset legacy absolute positioning for the two new photo-booth strips. */
+.photobooth{position:relative;height:auto;overflow:visible}
+.photobooth-left,.photobooth-right{left:auto;right:auto;top:auto}
+.memories::before{z-index:0}
