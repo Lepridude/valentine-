@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowDown, ArrowLeft, ArrowRight, Camera, ChevronDown, Heart, LockKeyhole, MailOpen, Music2, Sparkles, X } from 'lucide-react'
+import firstMemoryPhoto from './firstMemoryPhoto.b64?raw'
 
 type Note = { title: string; text: string; stamp: string }
 const reasons = [
@@ -17,7 +18,7 @@ const notes: Note[] = [
   { title: 'Просто так', text: 'Небольшое напоминание: ты невероятная. И да, я всё ещё считаю, что мне очень повезло.', stamp: 'важное сообщение' },
   { title: 'На потом', text: 'Давай и дальше собирать наши маленькие моменты: прогулки, смешные истории, фотографии и дни, которые захочется повторить.', stamp: 'продолжение следует' }
 ]
-const photoFiles = ['/photos/041.webp', '/photos/014.webp', '/photos/022.webp']
+const photoFiles = [`data:image/webp;base64,${firstMemoryPhoto.trim()}`, '/photos/014.webp', '/photos/022.webp']
 const moments = [
   { date: 'Глава первая', title: 'С чего всё начиналось', caption: 'С того самого момента, который хочется сохранить.', image: 0 },
   { date: 'Один из любимых дней', title: 'Маленькое приключение', caption: 'Ещё один день, который стал нашим.', image: 1 },
