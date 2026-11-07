@@ -41,3 +41,37 @@
     opacity:.055;
   }
 }
+
+
+/* Real photo details and restrained romantic accents. */
+.hero-emoji{position:absolute;z-index:1;font-size:22px;opacity:.72;filter:saturate(.72)}
+.hero-emoji-left{left:16%;top:34%;transform:rotate(-14deg)}
+.hero-emoji-right{right:15%;bottom:24%;transform:rotate(12deg)}
+.memories{isolation:isolate}
+.memories::before{
+  content:"";position:absolute;inset:80px 3% 20px;z-index:-1;pointer-events:none;
+  background:url('/photos/photobooth-pair.webp') center 48% / min(72vw,520px) auto no-repeat;
+  opacity:.065;filter:blur(1px)
+}
+.photobooth-pair{position:relative;display:flex;justify-content:center;align-items:flex-start;gap:clamp(26px,8vw,90px);margin:28px auto 40px;pointer-events:none}
+.photobooth{width:112px;background:#fffefa;padding:7px 7px 10px;box-shadow:0 10px 26px #704b4b18;display:flex;flex-direction:column;gap:5px}
+.photobooth-left{transform:rotate(-5deg);margin-top:10px}
+.photobooth-right{transform:rotate(5deg);margin-top:36px}
+.photobooth-frame{height:104px;width:100%;background-image:url('/photos/photobooth-pair.webp');background-size:200% 300%;background-repeat:no-repeat;background-color:#f0ded9}
+.photobooth-frame:first-child{border-top:1px solid #f2e5df}
+.moment-photo{height:210px;background-image:url('/photos/photobooth-pair.webp');background-size:200% 300%;background-repeat:no-repeat;background-color:#f0ded9}
+.memory-love-note{display:flex;justify-content:center;gap:17px;margin:35px auto 0;font-size:18px;opacity:.72}
+.photo-modal-image{height:300px;margin:0 auto 20px;max-width:360px;background-image:url('/photos/photobooth-pair.webp');background-size:200% 300%;background-repeat:no-repeat;background-color:#f0ded9}
+.photo-heart{font-size:21px}
+@media(max-width:700px){
+ .hero-emoji-left{left:8%;top:30%}.hero-emoji-right{right:8%;bottom:22%}
+ .photobooth-pair{gap:30px;margin:22px auto 32px}
+ .photobooth{width:94px;padding:6px 6px 8px;gap:4px}
+ .photobooth-frame{height:88px}
+ .photobooth-right{margin-top:27px}
+ .moment-photo{height:155px}
+ .photo-3 .moment-photo{height:185px}
+ .memories::before{inset:110px 0 0;background-size:300px auto;opacity:.05}
+ .photo-modal-image{height:260px}
+}
+@media(max-width:380px){.photobooth{width:84px}.photobooth-frame{height:80px}.moment-photo{height:135px}}
