@@ -124,3 +124,14 @@
  .memory-index b{font-size:11px}
  .memories-head .outline-icon{width:42px;height:42px}
 }
+
+
+/* Individual full-quality photos replace the old low-resolution contact sheet. */
+.photobooth-frame,.moment-photo,.photo-modal-image{
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+}
+.photobooth-frame{background-color:#f0ded9}
+.moment-photo{background-color:#f0ded9}
+.photo-modal-image{background-color:#f0ded9}
