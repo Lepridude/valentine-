@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowDown, ArrowLeft, ArrowRight, Camera, ChevronDown, Heart, LockKeyhole, MailOpen, Music2, Sparkles, X } from 'lucide-react'
-import firstMemoryPhoto from './firstMemoryPhoto.b64?raw'
 
 type Note = { title: string; text: string; stamp: string }
 const reasons = [
@@ -18,7 +17,7 @@ const notes: Note[] = [
   { title: 'Просто так', text: 'Небольшое напоминание: ты невероятная. И да, я всё ещё считаю, что мне очень повезло.', stamp: 'важное сообщение' },
   { title: 'На потом', text: 'Давай и дальше собирать наши маленькие моменты: прогулки, смешные истории, фотографии и дни, которые захочется повторить.', stamp: 'продолжение следует' }
 ]
-const photoFiles = [`data:image/webp;base64,${firstMemoryPhoto.trim()}`, '/photos/014.webp', '/photos/022.webp']
+const photoFiles = ['/photos/first.jpeg', '/photos/second.jpeg', '/photos/third.jpeg']
 const moments = [
   { date: 'Глава первая', title: 'С чего всё начиналось', caption: 'С того самого момента, который хочется сохранить.', image: 0 },
   { date: 'Один из любимых дней', title: 'Маленькое приключение', caption: 'Ещё один день, который стал нашим.', image: 1 },
@@ -54,7 +53,7 @@ function App() {
       <motion.div className="hero-content" initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .8 }}>
         <div className="eyebrow"><span/> 21 MAY 2026 · 21 NOVEMBER 2026 <span/></div>
         <div className="hero-heart"><Heart size={31} strokeWidth={1.1}/></div>
-        <p className="script hero-script">для самого любимого человека</p>
+        <p className="script hero-script">наша маленькая история</p>
         <h1>Полгода<br/><em>с тобой.</em></h1>
         <p className="hero-sub">Небольшая история о нас, наших моментах<br className="desktop-break"/> и о том, как я рад, что ты есть.</p>
         <button className="primary-btn" onClick={() => { setStarted(true); goTo('intro') }}>Открыть подарок <ArrowRight size={17}/></button>
@@ -113,7 +112,7 @@ function App() {
       <p className="body-copy memories-copy">Некоторые дни заканчиваются, а воспоминания о них остаются. Эти кадры хочется пересматривать снова и снова.</p>
       <div className="photo-grid">
         {moments.map((m, i) => <button key={m.title} className={`photo-card photo-${i+1}`} onClick={() => setPhoto(m.image)} aria-label={`Открыть фотографию: ${m.title}`}>
-          <div className="moment-photo" style={{ backgroundImage: `url(${photoFiles[m.image]})` }} />
+          <img className="moment-photo" src={photoFiles[m.image]} alt={m.title} loading="lazy" />
           <div className="photo-caption"><span>{m.date}</span><strong>{m.title}</strong><p>{m.caption}</p></div><span className="photo-heart">♡</span>
         </button>)}
       </div>
@@ -170,7 +169,7 @@ function App() {
       </motion.div>}
       {photo !== null && <motion.div className="modal-backdrop" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} onClick={() => setPhoto(null)}>
         <motion.div className="photo-modal" initial={{scale:.94,opacity:0}} animate={{scale:1,opacity:1}} exit={{scale:.96,opacity:0}} onClick={e => e.stopPropagation()}>
-          <button className="modal-close" onClick={() => setPhoto(null)} aria-label="Закрыть"><X size={18}/></button><div className="photo-modal-image" style={{ backgroundImage: `url(${photoFiles[photo % photoFiles.length]})` }} /><h3>{moments.find(m => m.image === photo)?.title ?? 'Наш момент'}</h3><p>{moments.find(m => m.image === photo)?.caption ?? 'Один из наших любимых кадров.'}</p>
+          <button className="modal-close" onClick={() => setPhoto(null)} aria-label="Закрыть"><X size={18}/></button><img className="photo-modal-image" src={photoFiles[photo % photoFiles.length]} alt={moments.find(m => m.image === photo)?.title ?? "Наш момент"} /><h3>{moments.find(m => m.image === photo)?.title ?? 'Наш момент'}</h3><p>{moments.find(m => m.image === photo)?.caption ?? 'Один из наших любимых кадров.'}</p>
         </motion.div>
       </motion.div>}
     </AnimatePresence>
