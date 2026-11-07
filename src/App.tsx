@@ -17,11 +17,11 @@ const notes: Note[] = [
   { title: 'Просто так', text: 'Небольшое напоминание: ты невероятная. И да, я всё ещё считаю, что мне очень повезло.', stamp: 'важное сообщение' },
   { title: 'На потом', text: 'Давай и дальше собирать наши маленькие моменты: прогулки, смешные истории, фотографии и дни, которые захочется повторить.', stamp: 'продолжение следует' }
 ]
-const photoPositions = ['0% 0%', '100% 0%', '0% 50%', '100% 50%', '0% 100%', '100% 100%']
+const photoFiles = ['/photos/041.webp', '/photos/014.webp', '/photos/022.webp']
 const moments = [
   { date: 'Глава первая', title: 'С чего всё начиналось', caption: 'С того самого момента, который хочется сохранить.', image: 0 },
-  { date: 'Один из любимых дней', title: 'Маленькое приключение', caption: 'Ещё один день, который стал нашим.', image: 2 },
-  { date: 'И сейчас', title: 'Наши полгода', caption: 'И впереди ещё столько общих историй.', image: 5 }
+  { date: 'Один из любимых дней', title: 'Маленькое приключение', caption: 'Ещё один день, который стал нашим.', image: 1 },
+  { date: 'И сейчас', title: 'Наши полгода', caption: 'И впереди ещё столько общих историй.', image: 2 }
 ]
 
 function App() {
@@ -113,12 +113,12 @@ function App() {
       <div className="memory-index"><span>PHOTO ARCHIVE</span><i></i><span>21 MAY — 21 NOV 2026</span><b>№ 06</b></div>
       <div className="photobooth-pair" aria-label="Наши фотографии в стиле фотобудки">
         {[0, 1].map((strip) => <div className={`photobooth photobooth-${strip === 0 ? 'left' : 'right'}`} key={strip}>
-          {[0, 1, 2].map((frame) => <div className="photobooth-frame" key={frame} style={{ backgroundPosition: photoPositions[strip * 3 + frame] }} />)}
+          {[0, 1, 2].map((frame) => <div className="photobooth-frame" key={frame} style={{ backgroundImage: `url(${photoFiles[(strip * 3 + frame) % photoFiles.length]})` }} />)}
         </div>)}
       </div>
       <div className="photo-grid">
         {moments.map((m, i) => <button key={m.title} className={`photo-card photo-${i+1}`} onClick={() => setPhoto(m.image)} aria-label={`Открыть фотографию: ${m.title}`}>
-          <div className="moment-photo" style={{ backgroundPosition: photoPositions[m.image] }} />
+          <div className="moment-photo" style={{ backgroundImage: `url(${photoFiles[m.image]})` }} />
           <div className="photo-caption"><span>{m.date}</span><strong>{m.title}</strong><p>{m.caption}</p></div><span className="photo-heart">♡</span>
         </button>)}
       </div>
@@ -175,7 +175,7 @@ function App() {
       </motion.div>}
       {photo !== null && <motion.div className="modal-backdrop" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} onClick={() => setPhoto(null)}>
         <motion.div className="photo-modal" initial={{scale:.94,opacity:0}} animate={{scale:1,opacity:1}} exit={{scale:.96,opacity:0}} onClick={e => e.stopPropagation()}>
-          <button className="modal-close" onClick={() => setPhoto(null)} aria-label="Закрыть"><X size={18}/></button><div className="photo-modal-image" style={{ backgroundPosition: photoPositions[photo] }} /><h3>{moments.find(m => m.image === photo)?.title ?? 'Наш момент'}</h3><p>{moments.find(m => m.image === photo)?.caption ?? 'Один из наших любимых кадров.'}</p>
+          <button className="modal-close" onClick={() => setPhoto(null)} aria-label="Закрыть"><X size={18}/></button><div className="photo-modal-image" style={{ backgroundImage: `url(${photoFiles[photo % photoFiles.length]})` }} /><h3>{moments.find(m => m.image === photo)?.title ?? 'Наш момент'}</h3><p>{moments.find(m => m.image === photo)?.caption ?? 'Один из наших любимых кадров.'}</p>
         </motion.div>
       </motion.div>}
     </AnimatePresence>
