@@ -18,3 +18,26 @@
  .photobooth-left img{left:0}
  .photobooth-right img{left:-86px}
 }
+
+/* Real photos in the two photo-booth strips; keep the rest of the layout intact. */
+.memories::before{
+  content:"";
+  position:absolute;
+  inset:90px 4% 20px;
+  z-index:0;
+  pointer-events:none;
+  background:url('/photos/photobooth-pair.webp') center 45% / min(70vw, 420px) auto no-repeat;
+  opacity:.075;
+  filter:blur(.7px);
+}
+.photobooth img{width:216px;height:315px;max-width:none;object-fit:fill}
+.photobooth-right img{left:-108px}
+@media(max-width:700px){
+  .photobooth img{width:168px;height:239px}
+  .photobooth-right img{left:-84px}
+  .memories::before{
+    inset:120px 0 0;
+    background-size:260px auto;
+    opacity:.055;
+  }
+}

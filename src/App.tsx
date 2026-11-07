@@ -109,9 +109,9 @@ function App() {
     <section className="memories section-wrap">
       <div className="section-kicker">КАДРЫ, КОТОРЫЕ ХОЧЕТСЯ СОХРАНИТЬ</div>
       <div className="memories-head"><div><p className="script accent-script">маленькая машина времени</p><h2>Наши <em>моменты.</em></h2></div><Camera className="outline-icon" size={38}/></div>
-      <p className="body-copy memories-copy">Некоторые дни заканчиваются, а воспоминания о них остаются. Здесь будут наши любимые фотографии и подписи к ним.</p>
+      <p className="body-copy memories-copy">Некоторые дни заканчиваются, а воспоминания о них остаются. Эти кадры хочется пересматривать снова и снова.</p>
       <div className="photobooth-pair" aria-hidden="true">
-        <div className="photobooth photobooth-left"><img src="/photos/photobooth-pair.jpg" alt="" /></div>
+        <div className="photobooth photobooth-left"><img src="/photos/photobooth-pair.webp" alt="" /></div>
         <div className="photobooth photobooth-right"><img src="/photos/photobooth-pair.jpg" alt="" /></div>
       </div>
       <div className="photo-grid">
