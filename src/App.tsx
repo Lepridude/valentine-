@@ -50,8 +50,6 @@ function App() {
     <section className="hero" id="home">
       <div className="hero-grain" />
       <span className="floating f2">♡</span>
-      <span className="hero-emoji hero-emoji-left" aria-hidden="true">💋</span>
-      <span className="hero-emoji hero-emoji-right" aria-hidden="true">❤️</span>
       <motion.div className="hero-content" initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .8 }}>
         <div className="eyebrow"><span/> 21 MAY 2026 · 21 NOVEMBER 2026 <span/></div>
         <div className="hero-heart"><Heart size={31} strokeWidth={1.1}/></div>
@@ -112,6 +110,7 @@ function App() {
       <div className="section-kicker">КАДРЫ, КОТОРЫЕ ХОЧЕТСЯ СОХРАНИТЬ</div>
       <div className="memories-head"><div><p className="script accent-script">маленькая машина времени</p><h2>Наши <em>моменты.</em></h2></div><Camera className="outline-icon" size={38}/></div>
       <p className="body-copy memories-copy">Некоторые дни заканчиваются, а воспоминания о них остаются. Эти кадры хочется пересматривать снова и снова.</p>
+      <div className="memory-index"><span>PHOTO ARCHIVE</span><i></i><span>21 MAY — 21 NOV 2026</span><b>№ 06</b></div>
       <div className="photobooth-pair" aria-label="Наши фотографии в стиле фотобудки">
         {[0, 1].map((strip) => <div className={`photobooth photobooth-${strip === 0 ? 'left' : 'right'}`} key={strip}>
           {[0, 1, 2].map((frame) => <div className="photobooth-frame" key={frame} style={{ backgroundPosition: photoPositions[strip * 3 + frame] }} />)}
@@ -123,7 +122,6 @@ function App() {
           <div className="photo-caption"><span>{m.date}</span><strong>{m.title}</strong><p>{m.caption}</p></div><span className="photo-heart">♡</span>
         </button>)}
       </div>
-      <div className="memory-love-note"><span>❤️</span><span>💋</span><span>💌</span><span>♡</span></div>
     </section>
 
     <section className="letters-section">
