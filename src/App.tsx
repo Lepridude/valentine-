@@ -95,7 +95,7 @@ function App() {
               
               <span className="big-heart">♡</span>
               <p>{reasons[reason]}</p>
-              <span className="card-sign">твой человек ♡</span>
+              <span className="card-sign" aria-label="сердце">♡</span>
             </motion.article>
           </AnimatePresence>
           <div className="reason-controls">
@@ -111,12 +111,6 @@ function App() {
       <div className="section-kicker">КАДРЫ, КОТОРЫЕ ХОЧЕТСЯ СОХРАНИТЬ</div>
       <div className="memories-head"><div><p className="script accent-script">маленькая машина времени</p><h2>Наши <em>моменты.</em></h2></div><Camera className="outline-icon" size={38}/></div>
       <p className="body-copy memories-copy">Некоторые дни заканчиваются, а воспоминания о них остаются. Эти кадры хочется пересматривать снова и снова.</p>
-      <div className="memory-index"><span>PHOTO ARCHIVE</span><i></i><span>21 MAY — 21 NOV 2026</span><b>№ 06</b></div>
-      <div className="photobooth-pair" aria-label="Наши фотографии в стиле фотобудки">
-        {[0, 1].map((strip) => <div className={`photobooth photobooth-${strip === 0 ? 'left' : 'right'}`} key={strip}>
-          {[0, 1, 2].map((frame) => <div className="photobooth-frame" key={frame} style={{ backgroundImage: `url(${photoFiles[(strip * 3 + frame) % photoFiles.length]})` }} />)}
-        </div>)}
-      </div>
       <div className="photo-grid">
         {moments.map((m, i) => <button key={m.title} className={`photo-card photo-${i+1}`} onClick={() => setPhoto(m.image)} aria-label={`Открыть фотографию: ${m.title}`}>
           <div className="moment-photo" style={{ backgroundImage: `url(${photoFiles[m.image]})` }} />
@@ -157,7 +151,7 @@ function App() {
           <p>Я не знаю, что нас ждёт дальше, но точно знаю, что хочу продолжать создавать с тобой воспоминания.</p>
           <p>Спасибо тебе за эти полгода. Я очень тебя люблю.</p>
         </div>
-        <div className="letter-sign"><span className="script">твой человек</span><Heart size={20} fill="currentColor"/></div>
+        <div className="letter-sign"><Heart size={20} fill="currentColor"/></div>
         <span className="paper-seal">♡</span>
       </article>
     </section>
