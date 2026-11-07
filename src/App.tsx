@@ -17,10 +17,11 @@ const notes: Note[] = [
   { title: 'Просто так', text: 'Небольшое напоминание: ты невероятная. И да, я всё ещё считаю, что мне очень повезло.', stamp: 'важное сообщение' },
   { title: 'На потом', text: 'Давай и дальше собирать наши маленькие моменты: прогулки, смешные истории, фотографии и дни, которые захочется повторить.', stamp: 'продолжение следует' }
 ]
+const photoPositions = ['0% 0%', '100% 0%', '0% 50%', '100% 50%', '0% 100%', '100% 100%']
 const moments = [
-  { date: 'Глава первая', title: 'С чего всё начиналось', caption: 'Здесь будет фотография и история вашего знакомства.' },
-  { date: 'Один из любимых дней', title: 'Маленькое приключение', caption: 'Добавим место, дату и то, что хочется запомнить.' },
-  { date: 'И сейчас', title: 'Наши полгода', caption: 'Ещё одна глава нашей общей истории.' }
+  { date: 'Глава первая', title: 'С чего всё начиналось', caption: 'С того самого момента, который хочется сохранить.', image: 0 },
+  { date: 'Один из любимых дней', title: 'Маленькое приключение', caption: 'Ещё один день, который стал нашим.', image: 2 },
+  { date: 'И сейчас', title: 'Наши полгода', caption: 'И впереди ещё столько общих историй.', image: 5 }
 ]
 
 function App() {
@@ -49,6 +50,8 @@ function App() {
     <section className="hero" id="home">
       <div className="hero-grain" />
       <span className="floating f2">♡</span>
+      <span className="hero-emoji hero-emoji-left" aria-hidden="true">💋</span>
+      <span className="hero-emoji hero-emoji-right" aria-hidden="true">❤️</span>
       <motion.div className="hero-content" initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .8 }}>
         <div className="eyebrow"><span/> 21 MAY 2026 · 21 NOVEMBER 2026 <span/></div>
         <div className="hero-heart"><Heart size={31} strokeWidth={1.1}/></div>
@@ -101,7 +104,6 @@ function App() {
             <div className="dots">{reasons.map((_, i) => <button key={i} className={i === reason ? 'dot active' : 'dot'} onClick={() => setReason(i)} aria-label={`Карточка ${i+1}`}/>)}</div>
             <button className="round-btn filled" onClick={() => setReason((reason + 1) % reasons.length)} aria-label="Следующая карточка"><ArrowRight size={17}/></button>
           </div>
-          <p className="swipe-hint">можно листать стрелками или просто нажимать на точки</p>
         </div>
       </div>
     </section>
@@ -110,16 +112,18 @@ function App() {
       <div className="section-kicker">КАДРЫ, КОТОРЫЕ ХОЧЕТСЯ СОХРАНИТЬ</div>
       <div className="memories-head"><div><p className="script accent-script">маленькая машина времени</p><h2>Наши <em>моменты.</em></h2></div><Camera className="outline-icon" size={38}/></div>
       <p className="body-copy memories-copy">Некоторые дни заканчиваются, а воспоминания о них остаются. Эти кадры хочется пересматривать снова и снова.</p>
-      <div className="photobooth-pair" aria-hidden="true">
-        <div className="photobooth photobooth-left"><img src="/photos/photobooth-pair.webp" alt="" /></div>
-        <div className="photobooth photobooth-right"><img src="/photos/photobooth-pair.jpg" alt="" /></div>
+      <div className="photobooth-pair" aria-label="Наши фотографии в стиле фотобудки">
+        {[0, 1].map((strip) => <div className={`photobooth photobooth-${strip === 0 ? 'left' : 'right'}`} key={strip}>
+          {[0, 1, 2].map((frame) => <div className="photobooth-frame" key={frame} style={{ backgroundPosition: photoPositions[strip * 3 + frame] }} />)}
+        </div>)}
       </div>
       <div className="photo-grid">
-        {moments.map((m, i) => <button key={m.title} className={`photo-card photo-${i+1}`} onClick={() => setPhoto(i)}>
-          <div className="photo-placeholder"><span className="photo-icon"><Camera size={22}/></span><span>ВАША ФОТОГРАФИЯ</span><small>нажми, чтобы открыть</small></div>
+        {moments.map((m, i) => <button key={m.title} className={`photo-card photo-${i+1}`} onClick={() => setPhoto(m.image)} aria-label={`Открыть фотографию: ${m.title}`}>
+          <div className="moment-photo" style={{ backgroundPosition: photoPositions[m.image] }} />
           <div className="photo-caption"><span>{m.date}</span><strong>{m.title}</strong><p>{m.caption}</p></div><span className="photo-heart">♡</span>
         </button>)}
       </div>
+      <div className="memory-love-note"><span>❤️</span><span>💋</span><span>💌</span><span>♡</span></div>
     </section>
 
     <section className="letters-section">
@@ -173,7 +177,7 @@ function App() {
       </motion.div>}
       {photo !== null && <motion.div className="modal-backdrop" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} onClick={() => setPhoto(null)}>
         <motion.div className="photo-modal" initial={{scale:.94,opacity:0}} animate={{scale:1,opacity:1}} exit={{scale:.96,opacity:0}} onClick={e => e.stopPropagation()}>
-          <button className="modal-close" onClick={() => setPhoto(null)} aria-label="Закрыть"><X size={18}/></button><div className="photo-placeholder large"><Camera size={30}/><span>ЗДЕСЬ БУДЕТ ВАШ КАДР</span></div><h3>{moments[photo].title}</h3><p>{moments[photo].caption}</p>
+          <button className="modal-close" onClick={() => setPhoto(null)} aria-label="Закрыть"><X size={18}/></button><div className="photo-modal-image" style={{ backgroundPosition: photoPositions[photo] }} /><h3>{moments.find(m => m.image === photo)?.title ?? 'Наш момент'}</h3><p>{moments.find(m => m.image === photo)?.caption ?? 'Один из наших любимых кадров.'}</p>
         </motion.div>
       </motion.div>}
     </AnimatePresence>
