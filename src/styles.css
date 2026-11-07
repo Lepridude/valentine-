@@ -80,3 +80,14 @@
 .photobooth{position:relative;height:auto;overflow:visible}
 .photobooth-left,.photobooth-right{left:auto;right:auto;top:auto}
 .memories::before{z-index:0}
+
+/* The full 46-photo archive is used as a very soft backdrop in the memories section. */
+.memories::before{
+  background-image:url('/photos/archive-collage.webp');
+  background-size:min(78vw,620px) auto;
+  background-position:center 42%;
+  opacity:.07;
+}
+@media(max-width:700px){
+  .memories::before{background-size:310px auto;opacity:.055}
+}
