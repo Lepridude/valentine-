@@ -279,3 +279,57 @@ body{
   .memories:after,.letter-section:after,.letters:after,.closing-section:after{width:125px;height:125px;opacity:.27}
   .memories:after{right:-35px;top:4%}
 }
+
+
+/* Original photo assets: render as real images to preserve their native ratio. */
+.memories .photo-card{overflow:hidden}
+.memories .photo-card .moment-photo{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:620px;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  background:#f1e2dc;
+}
+.photo-modal-image{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:72vh;
+  object-fit:contain;
+  object-position:center;
+  background:#f1e2dc;
+}
+@media(max-width:900px){
+  .memories.section-wrap{box-sizing:border-box;width:100%;padding-left:18px;padding-right:18px}
+  .memories .photo-grid{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    grid-auto-flow:row!important;
+    gap:22px!important;
+    width:100%!important;
+    margin:0!important;
+    padding:8px 0 18px!important;
+  }
+  .memories .photo-grid>.photo-card{
+    box-sizing:border-box!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    margin:0!important;
+    justify-self:stretch!important;
+    align-self:stretch!important;
+    transform:none!important;
+  }
+  .memories .photo-card .moment-photo{
+    width:100%!important;
+    height:auto!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+  }
+  .memories .photo-caption{min-width:0;overflow-wrap:anywhere}
+  .memories .photo-caption strong{font-size:clamp(19px,5.4vw,24px);line-height:1.28}
+}
