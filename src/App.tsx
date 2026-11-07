@@ -48,9 +48,9 @@ function App() {
 
     <section className="hero" id="home">
       <div className="hero-grain" />
-      <span className="floating f1">✳</span><span className="floating f2">♡</span><span className="floating f3">✿</span>
+      <span className="floating f2">♡</span>
       <motion.div className="hero-content" initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .8 }}>
-        <div className="eyebrow"><span/> 08 NOVEMBER · A LITTLE CELEBRATION <span/></div>
+        <div className="eyebrow"><span/> 21 MAY 2026 · 21 NOVEMBER 2026 <span/></div>
         <div className="hero-heart"><Heart size={31} strokeWidth={1.1}/></div>
         <p className="script hero-script">для самого любимого человека</p>
         <h1>Полгода<br/><em>с тобой.</em></h1>
@@ -59,11 +59,11 @@ function App() {
         <div className="hero-foot">ЛИСТАЙ МЕДЛЕННО — ЗДЕСЬ ВСЁ ДЛЯ ТЕБЯ <ArrowDown size={13}/></div>
       </motion.div>
       <div className="hero-sticker sticker-left">made<br/>with love <Heart size={13}/></div>
-      <div className="hero-sticker sticker-right">№ 01<br/><span>для тебя</span></div>
+      <div className="hero-sticker sticker-right">для тебя ♡</div>
     </section>
 
     <section className="intro section-wrap" id="intro">
-      <div className="section-kicker">01 / НАШ МАЛЕНЬКИЙ ПОВОД</div>
+      <div className="section-kicker">НАШ МАЛЕНЬКИЙ ПОВОД</div>
       <div className="intro-grid">
         <div>
           <p className="script accent-script">и вот уже...</p>
@@ -72,10 +72,10 @@ function App() {
         </div>
         <div className="date-card">
           <span className="date-flower">✿</span>
-          <span className="date-label">НАША ДАТА</span>
-          <strong>06 <i>месяцев</i></strong>
+          <span className="date-label">НАЧАЛО НАШЕЙ ИСТОРИИ</span>
+          <strong>21 <i>мая 2026</i></strong>
           <span className="date-divider">♡ ───────── ♡</span>
-          <p>и это только начало</p>
+          <p>21 ноября 2026 · полгода вместе</p>
           <span className="date-hand">с любовью, для тебя</span>
         </div>
       </div>
@@ -83,14 +83,14 @@ function App() {
 
     <section className="reasons-section">
       <div className="section-wrap">
-        <div className="section-kicker">02 / НЕБОЛЬШИЕ ПРИЗНАНИЯ</div>
+        <div className="section-kicker">НЕБОЛЬШИЕ ПРИЗНАНИЯ</div>
         <div className="section-heading"><div><p className="script accent-script">если вдруг ты забыла</p><h2>6 причин,<br/><em>почему ты.</em></h2></div><span className="heading-doodle">♡</span></div>
         <div className="reason-stage">
           <div className="paper-shadow"/>
           <AnimatePresence mode="wait">
             <motion.article className="reason-card" key={reason} initial={{ opacity: 0, rotate: -2, y: 15 }} animate={{ opacity: 1, rotate: 0, y: 0 }} exit={{ opacity: 0, rotate: 2, y: -10 }} transition={{ duration: .3 }}>
               <span className="tape"/>
-              <span className="card-number">0{reason + 1} <i>/ 06</i></span>
+              
               <span className="big-heart">♡</span>
               <p>{reasons[reason]}</p>
               <span className="card-sign">твой человек ♡</span>
@@ -107,7 +107,7 @@ function App() {
     </section>
 
     <section className="memories section-wrap">
-      <div className="section-kicker">03 / КАДРЫ, КОТОРЫЕ ХОЧЕТСЯ СОХРАНИТЬ</div>
+      <div className="section-kicker">КАДРЫ, КОТОРЫЕ ХОЧЕТСЯ СОХРАНИТЬ</div>
       <div className="memories-head"><div><p className="script accent-script">маленькая машина времени</p><h2>Наши <em>моменты.</em></h2></div><Camera className="outline-icon" size={38}/></div>
       <p className="body-copy memories-copy">Некоторые дни заканчиваются, а воспоминания о них остаются. Здесь будут наши любимые фотографии и подписи к ним.</p>
       <div className="photo-grid">
@@ -120,7 +120,7 @@ function App() {
 
     <section className="letters-section">
       <div className="section-wrap">
-        <div className="section-kicker">04 / НЕСКОЛЬКО СЛОВ ДЛЯ ТЕБЯ</div>
+        <div className="section-kicker">НЕСКОЛЬКО СЛОВ ДЛЯ ТЕБЯ</div>
         <div className="section-heading"><div><p className="script accent-script">открой, когда захочется</p><h2>Письма,<br/><em>которые рядом.</em></h2></div><span className="heading-doodle">✉</span></div>
         <p className="body-copy">Небольшие послания на разные случаи. Выбирай конверт — внутри кое-что для тебя.</p>
         <div className="envelopes">
@@ -133,15 +133,15 @@ function App() {
 
     <section className="little-joy section-wrap">
       <div className="joy-card">
-        <span className="joy-spark">✳</span><p className="script">маленькое напоминание</p><h2>{randomLine[compliment]}</h2>
+        <span className="joy-spark">♡</span><p className="script">маленькое напоминание</p><h2>{randomLine[compliment]}</h2>
         <button className="text-btn" onClick={() => setCompliment((compliment + 1) % randomLine.length)}>Ещё одну милую фразу <Sparkles size={16}/></button>
       </div>
     </section>
 
     <section className="letter-final section-wrap">
-      <div className="section-kicker">05 / САМОЕ ГЛАВНОЕ</div>
+      <div className="section-kicker">САМОЕ ГЛАВНОЕ</div>
       <article className="final-paper">
-        <span className="paper-top">A LETTER FOR YOU · 08.11.2026</span>
+        <span className="paper-top">21.05.2026 — 21.11.2026 · SIX MONTHS TOGETHER</span>
         <p className="script accent-script">моя хорошая,</p>
         <h2>И всё-таки<br/><em>самое главное...</em></h2>
         <div className="letter-body">
