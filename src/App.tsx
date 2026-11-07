@@ -110,6 +110,10 @@ function App() {
       <div className="section-kicker">КАДРЫ, КОТОРЫЕ ХОЧЕТСЯ СОХРАНИТЬ</div>
       <div className="memories-head"><div><p className="script accent-script">маленькая машина времени</p><h2>Наши <em>моменты.</em></h2></div><Camera className="outline-icon" size={38}/></div>
       <p className="body-copy memories-copy">Некоторые дни заканчиваются, а воспоминания о них остаются. Здесь будут наши любимые фотографии и подписи к ним.</p>
+      <div className="photobooth-pair" aria-hidden="true">
+        <div className="photobooth photobooth-left"><img src="/photos/photobooth-pair.jpg" alt="" /></div>
+        <div className="photobooth photobooth-right"><img src="/photos/photobooth-pair.jpg" alt="" /></div>
+      </div>
       <div className="photo-grid">
         {moments.map((m, i) => <button key={m.title} className={`photo-card photo-${i+1}`} onClick={() => setPhoto(i)}>
           <div className="photo-placeholder"><span className="photo-icon"><Camera size={22}/></span><span>ВАША ФОТОГРАФИЯ</span><small>нажми, чтобы открыть</small></div>
