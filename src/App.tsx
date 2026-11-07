@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import firstMemoryPhoto from './firstMemoryPhoto.b64?raw'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowDown, ArrowLeft, ArrowRight, Camera, ChevronDown, Heart, LockKeyhole, MailOpen, Music2, Sparkles, X } from 'lucide-react'
 
@@ -17,7 +18,7 @@ const notes: Note[] = [
   { title: 'Просто так', text: 'Небольшое напоминание: ты невероятная. И да, я всё ещё считаю, что мне очень повезло.', stamp: 'важное сообщение' },
   { title: 'На потом', text: 'Давай и дальше собирать наши маленькие моменты: прогулки, смешные истории, фотографии и дни, которые захочется повторить.', stamp: 'продолжение следует' }
 ]
-const photoFiles = ['/photos/first.jpeg', '/photos/second.jpeg', '/photos/third.jpeg']
+const photoFiles = [`data:image/webp;base64,${firstMemoryPhoto.trim()}`, '/photos/014.webp', '/photos/022.webp']
 const moments = [
   { date: 'Глава первая', title: 'С чего всё начиналось', caption: 'С того самого момента, который хочется сохранить.', image: 0 },
   { date: 'Один из любимых дней', title: 'Маленькое приключение', caption: 'Ещё один день, который стал нашим.', image: 1 },
@@ -59,8 +60,6 @@ function App() {
         <button className="primary-btn" onClick={() => { setStarted(true); goTo('intro') }}>Открыть подарок <ArrowRight size={17}/></button>
         <div className="hero-foot">ЛИСТАЙ МЕДЛЕННО — ЗДЕСЬ ВСЁ ДЛЯ ТЕБЯ <ArrowDown size={13}/></div>
       </motion.div>
-      <div className="hero-sticker sticker-left">made<br/>with love <Heart size={13}/></div>
-      <div className="hero-sticker sticker-right">для тебя ♡</div>
     </section>
 
     <section className="intro section-wrap" id="intro">
