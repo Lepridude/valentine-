@@ -239,3 +239,43 @@
   .memories .photo-grid>.photo-card .photo-caption strong{display:block!important;font-size:clamp(19px,5vw,23px)!important;line-height:1.3!important;white-space:normal!important}
   .memories .photo-grid>.photo-card .photo-caption p{font-size:13px!important;line-height:1.65!important}
 }
+
+
+/* Hand-drawn romantic background ornaments */
+body{
+  background-color:#fff8f3;
+  background-image:
+    radial-gradient(ellipse at 8% 12%, rgba(193,119,126,.075) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 91% 38%, rgba(193,119,126,.07) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 18% 82%, rgba(193,119,126,.06) 0 1px, transparent 2px);
+  background-size:34px 34px,42px 42px,29px 29px;
+}
+.memories,.letter-section,.letters,.closing-section{position:relative;isolation:isolate}
+.memories:after,.letter-section:after,.letters:after,.closing-section:after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  pointer-events:none;
+  width:190px;height:190px;
+  opacity:.42;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='%23c58b8d' stroke-width='1.15' stroke-linecap='round'%3E%3Cpath d='M20 175C55 145 44 94 91 65c22-14 44-12 69-43M42 151c-2-21-19-28-30-22 2 18 14 27 30 22Zm15-25c-3-22 9-34 25-35 4 17-7 31-25 35Zm27-32c-1-21 12-31 27-29 2 16-10 27-27 29Zm-38 44c-19-5-29 3-31 17 15 8 27-1 31-17Zm55-55c-15-17-12-31 0-40 14 10 14 25 0 40Z'/%3E%3Cpath d='M25 179c38-20 62-51 83-83' stroke-dasharray='2 5'/%3E%3C/svg%3E");
+}
+.memories:after{right:-38px;top:10%;transform:rotate(12deg)}
+.letter-section:after,.letters:after{left:-42px;bottom:4%;transform:rotate(-22deg)}
+.closing-section:after{right:-35px;top:8%;transform:rotate(28deg)}
+.memories .photo-card{box-shadow:0 16px 34px rgba(100,66,61,.09),0 2px 7px rgba(100,66,61,.05)}
+.memories .photo-card:before{
+  content:"";
+  position:absolute;
+  width:42px;height:42px;
+  right:19px;top:17px;
+  border:1px solid rgba(190,124,133,.42);
+  border-radius:50%;
+  pointer-events:none;
+}
+@media(max-width:900px){
+  .memories:after,.letter-section:after,.letters:after,.closing-section:after{width:125px;height:125px;opacity:.27}
+  .memories:after{right:-35px;top:4%}
+}
