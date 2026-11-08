@@ -61,27 +61,27 @@ const notes: Note[] = [
 ]
 
 const moments: Moment[] = [
-  { date: 'НАЧАЛО', title: 'С чего всё начиналось', caption: "С того самого кадра началась наша история. ♡", src: '/photos/memory-05.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Кажется, с тобой даже обычные дни становятся особенными.", src: '/photos/memory-01.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Один из тех моментов, которые хочется сохранить.", src: '/photos/memory-02.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "И снова улыбаюсь, когда пересматриваю этот кадр.", src: '/photos/memory-03.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Маленькое воспоминание о большом счастье.", src: '/photos/memory-06.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Мне нравится, сколько всего у нас уже есть.", src: '/photos/memory-08.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Вот так и складывается наша общая история.", src: '/photos/memory-11.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Хочется нажать паузу и остаться в этом моменте.", src: '/photos/memory-12.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "С тобой рядом всегда как-то теплее.", src: '/photos/memory-13.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Ещё один кадр, который я берегу.", src: '/photos/memory-14.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Из таких мелочей и получается наше самое любимое.", src: '/photos/memory-15.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Улыбка, которую хочется видеть каждый день.", src: '/photos/memory-16.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Пусть таких фотографий будет ещё очень много.", src: '/photos/memory-18.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Воспоминание, к которому приятно возвращаться.", src: '/photos/memory-19.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Наш маленький мир — и столько всего впереди.", src: '/photos/memory-20.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Каждый такой кадр напоминает, как мне повезло.", src: '/photos/memory-21.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Один день, одна фотография и целая история.", src: '/photos/memory-24.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Хорошо, что у нас есть эти моменты.", src: '/photos/memory-25.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Сохраняю не только фото, но и чувство того дня.", src: '/photos/memory-27.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Ещё одна страница нашей истории. ♡", src: '/photos/memory-28.webp' },
-  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "И пусть впереди будет бесконечно много таких дней.", src: '/photos/memory-29.webp' },
+  { date: 'НАЧАЛО', title: 'С чего всё начиналось', caption: "С того самого кадра началась наша история ♡", src: '/photos/memory-05.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Кажется, с тобой даже обычные дни становятся особенными", src: '/photos/memory-01.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Один из тех моментов, которые хочется сохранить", src: '/photos/memory-02.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "И снова улыбаюсь, когда пересматриваю этот кадр", src: '/photos/memory-03.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Маленькое воспоминание о большом счастье", src: '/photos/memory-06.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Мне нравится, сколько всего у нас уже есть", src: '/photos/memory-08.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Вот так и складывается наша общая история", src: '/photos/memory-11.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Хочется нажать паузу и остаться в этом моменте", src: '/photos/memory-12.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "С тобой рядом всегда как-то теплее", src: '/photos/memory-13.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Ещё один кадр, который я берегу", src: '/photos/memory-14.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Из таких мелочей и получается наше самое любимое", src: '/photos/memory-15.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Улыбка, которую хочется видеть каждый день", src: '/photos/memory-16.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Пусть таких фотографий будет ещё очень много", src: '/photos/memory-18.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Воспоминание, к которому приятно возвращаться", src: '/photos/memory-19.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Наш маленький мир — и столько всего впереди", src: '/photos/memory-20.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Каждый такой кадр напоминает, как мне повезло", src: '/photos/memory-21.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Один день, одна фотография и целая история", src: '/photos/memory-24.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Хорошо, что у нас есть эти моменты", src: '/photos/memory-25.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Сохраняю не только фото, но и чувство того дня", src: '/photos/memory-27.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "Ещё одна страница нашей истории ♡", src: '/photos/memory-28.webp' },
+  { date: 'НАША ИСТОРИЯ', title: 'Наши моменты', caption: "И пусть впереди будет бесконечно много таких дней", src: '/photos/memory-29.webp' },
 ]
 
 const timeline = [
@@ -393,6 +393,7 @@ function App() {
                   event.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%23f8e9ed'/%3E%3Ctext x='50%25' y='48%25' text-anchor='middle' fill='%23bd8497' font-size='72'%3E%E2%99%A1%3C/text%3E%3Ctext x='50%25' y='60%25' text-anchor='middle' fill='%239b7180' font-size='24'%3E%D0%A4%D0%BE%D1%82%D0%BE%20%D1%81%D0%BA%D0%BE%D1%80%D0%BE%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C%3C/text%3E%3C/svg%3E"
                 }}
               />
+              <span className="photo-number" aria-hidden="true">{String(index + 1).padStart(2, '0')} <i>/</i> {String(moments.length).padStart(2, '0')}</span>
               <div className="photo-caption">
                 <span>{moment.date}</span>
                 <strong>{moment.title}</strong>
