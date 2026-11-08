@@ -21,13 +21,6 @@
     "sha256": "000fb0e19c3ff7461594551cff85d16f394688a70ad2c09927761d9b9b65be58"
   },
   {
-    "file": "memory-04.webp",
-    "width": 1800,
-    "height": 2400,
-    "bytes": 445112,
-    "sha256": "4d06600319a189a580fb19f4870c694982d039b24a6c9f333c40dd800ceb0b2d"
-  },
-  {
     "file": "memory-05.webp",
     "width": 868,
     "height": 645,
@@ -42,32 +35,11 @@
     "sha256": "c810b479b93b12d7673d64fa6e499a7182a9df4ac44673818d43a8682374fbac"
   },
   {
-    "file": "memory-07.webp",
-    "width": 960,
-    "height": 1280,
-    "bytes": 186134,
-    "sha256": "7bbe7af43939a7bd0a380da11ed7a9cd80b360c6dda00148565b89942ffff6c3"
-  },
-  {
     "file": "memory-08.webp",
     "width": 1800,
     "height": 2400,
     "bytes": 240726,
     "sha256": "eefb015d575a67f0bd823f29bccc55662dec993d7d51b955f73d22eb2214a35f"
-  },
-  {
-    "file": "memory-09.webp",
-    "width": 1280,
-    "height": 960,
-    "bytes": 214890,
-    "sha256": "95084a63743e0bc19c4a1a2bc32075d4c5743a3d7a6e6c446a754b69fe279625"
-  },
-  {
-    "file": "memory-10.webp",
-    "width": 2400,
-    "height": 1600,
-    "bytes": 749546,
-    "sha256": "f94f8a6fc62c37ce275ba7fe868f0c9f65e5662fa6df05824721765aa8585fa7"
   },
   {
     "file": "memory-11.webp",
@@ -112,13 +84,6 @@
     "sha256": "2d31122f2ac5272d4edd66ff3ecee2e458d213bbf257b9ac76b748a112d599cf"
   },
   {
-    "file": "memory-17.webp",
-    "width": 1290,
-    "height": 2159,
-    "bytes": 127216,
-    "sha256": "356cb6dd2a92d4b6c5474f65408003e62260dcbc2f72646285c54411db8aeff0"
-  },
-  {
     "file": "memory-18.webp",
     "width": 1800,
     "height": 2400,
@@ -147,20 +112,6 @@
     "sha256": "6961904ecc58175a7c22cc6340a361d5092696bb216bc9ee64ac05fcfd405aee"
   },
   {
-    "file": "memory-22.webp",
-    "width": 1800,
-    "height": 2400,
-    "bytes": 290530,
-    "sha256": "15f373cf837cc237493ba80629cc06c9b9ce7db73fb24b00e69c874c1ecabd23"
-  },
-  {
-    "file": "memory-23.webp",
-    "width": 1800,
-    "height": 2400,
-    "bytes": 371254,
-    "sha256": "8bf7d647f43d2be3feee5dab2bdf9cdb5993fdc37b6af4a93e338bb2dea9cb9a"
-  },
-  {
     "file": "memory-24.webp",
     "width": 960,
     "height": 1280,
@@ -173,13 +124,6 @@
     "height": 1800,
     "bytes": 488408,
     "sha256": "1e882923691d225cc9f9e9a4d848dfb5eddc53b7a4bd03c485d0a8c137cc716b"
-  },
-  {
-    "file": "memory-26.webp",
-    "width": 1800,
-    "height": 2400,
-    "bytes": 472436,
-    "sha256": "eedb14130aa122a8d8e45d8a495a834c32fd5666a288d71ea8ff15e2db0ee6a0"
   },
   {
     "file": "memory-27.webp",
