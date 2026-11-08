@@ -1,0 +1,191 @@
+[
+  {
+    "file": "memory-01.webp",
+    "width": 1600,
+    "height": 2400,
+    "bytes": 529330,
+    "sha256": "a97cd5c3ef647dafa6b56bcfce5b0f1d10505544e53f414c9ace844bfcede00e"
+  },
+  {
+    "file": "memory-02.webp",
+    "width": 2400,
+    "height": 1800,
+    "bytes": 526356,
+    "sha256": "2b88879f7aed40e1584f2f8af8fc6ed5a35cd14b490533ba92a643984ab1d1f9"
+  },
+  {
+    "file": "memory-03.webp",
+    "width": 1800,
+    "height": 2400,
+    "bytes": 374288,
+    "sha256": "000fb0e19c3ff7461594551cff85d16f394688a70ad2c09927761d9b9b65be58"
+  },
+  {
+    "file": "memory-04.webp",
+    "width": 1800,
+    "height": 2400,
+    "bytes": 445112,
+    "sha256": "4d06600319a189a580fb19f4870c694982d039b24a6c9f333c40dd800ceb0b2d"
+  },
+  {
+    "file": "memory-05.webp",
+    "width": 868,
+    "height": 645,
+    "bytes": 37374,
+    "sha256": "e309131cb80c19142793ce297c4af445736f8f287d1b401de295b775c967cf30"
+  },
+  {
+    "file": "memory-06.webp",
+    "width": 1800,
+    "height": 2400,
+    "bytes": 643116,
+    "sha256": "c810b479b93b12d7673d64fa6e499a7182a9df4ac44673818d43a8682374fbac"
+  },
+  {
+    "file": "memory-07.webp",
+    "width": 960,
+    "height": 1280,
+    "bytes": 186134,
+    "sha256": "7bbe7af43939a7bd0a380da11ed7a9cd80b360c6dda00148565b89942ffff6c3"
+  },
+  {
+    "file": "memory-08.webp",
+    "width": 1800,
+    "height": 2400,
+    "bytes": 240726,
+    "sha256": "eefb015d575a67f0bd823f29bccc55662dec993d7d51b955f73d22eb2214a35f"
+  },
+  {
+    "file": "memory-09.webp",
+    "width": 1280,
+    "height": 960,
+    "bytes": 214890,
+    "sha256": "95084a63743e0bc19c4a1a2bc32075d4c5743a3d7a6e6c446a754b69fe279625"
+  },
+  {
+    "file": "memory-10.webp",
+    "width": 2400,
+    "height": 1600,
+    "bytes": 749546,
+    "sha256": "f94f8a6fc62c37ce275ba7fe868f0c9f65e5662fa6df05824721765aa8585fa7"
+  },
+  {
+    "file": "memory-11.webp",
+    "width": 1288,
+    "height": 2215,
+    "bytes": 133348,
+    "sha256": "c33704b5fb284d9cbbf48c65fb930881fc297b8834f71418fc8dae9a8f351463"
+  },
+  {
+    "file": "memory-12.webp",
+    "width": 1800,
+    "height": 2400,
+    "bytes": 350642,
+    "sha256": "3e171013d02aab4abc01c4e067e9bf1f387c6d095667bf61d3347d6040534ab2"
+  },
+  {
+    "file": "memory-13.webp",
+    "width": 960,
+    "height": 1280,
+    "bytes": 352530,
+    "sha256": "da225abc1c3be18a1ccde3ef42c1b90012196a0395c62bd667e97d9b19c2bf56"
+  },
+  {
+    "file": "memory-14.webp",
+    "width": 1080,
+    "height": 1440,
+    "bytes": 116840,
+    "sha256": "047ca206922d51b56b079a7568417c48903b6a240ee0a95b2e304bc4ddd8ff34"
+  },
+  {
+    "file": "memory-15.webp",
+    "width": 960,
+    "height": 1280,
+    "bytes": 123280,
+    "sha256": "ff3eaed9ad59f11f4d21822ce7a7e3a2e497fc5ef7503bef69bd2fb6705ca179"
+  },
+  {
+    "file": "memory-16.webp",
+    "width": 1290,
+    "height": 2213,
+    "bytes": 410908,
+    "sha256": "2d31122f2ac5272d4edd66ff3ecee2e458d213bbf257b9ac76b748a112d599cf"
+  },
+  {
+    "file": "memory-17.webp",
+    "width": 1290,
+    "height": 2159,
+    "bytes": 127216,
+    "sha256": "356cb6dd2a92d4b6c5474f65408003e62260dcbc2f72646285c54411db8aeff0"
+  },
+  {
+    "file": "memory-18.webp",
+    "width": 1800,
+    "height": 2400,
+    "bytes": 226510,
+    "sha256": "8428f08d643acc22ce47b4d99f8ea4c4fce89d344678482bdb480d7729092c99"
+  },
+  {
+    "file": "memory-19.webp",
+    "width": 718,
+    "height": 1077,
+    "bytes": 197978,
+    "sha256": "57f9bfd71ba61ac77fdc172c3d0696b539ea313f46dcd8721215075f91c27666"
+  },
+  {
+    "file": "memory-20.webp",
+    "width": 960,
+    "height": 1280,
+    "bytes": 207820,
+    "sha256": "4fb5b2c54920c4dabad875f0372d6b62ae5308b616163fbc91a1b762ee12589b"
+  },
+  {
+    "file": "memory-21.webp",
+    "width": 1800,
+    "height": 2400,
+    "bytes": 478330,
+    "sha256": "6961904ecc58175a7c22cc6340a361d5092696bb216bc9ee64ac05fcfd405aee"
+  },
+  {
+    "file": "memory-22.webp",
+    "width": 1800,
+    "height": 2400,
+    "bytes": 290530,
+    "sha256": "15f373cf837cc237493ba80629cc06c9b9ce7db73fb24b00e69c874c1ecabd23"
+  },
+  {
+    "file": "memory-23.webp",
+    "width": 1800,
+    "height": 2400,
+    "bytes": 371254,
+    "sha256": "8bf7d647f43d2be3feee5dab2bdf9cdb5993fdc37b6af4a93e338bb2dea9cb9a"
+  },
+  {
+    "file": "memory-24.webp",
+    "width": 960,
+    "height": 1280,
+    "bytes": 88434,
+    "sha256": "0474f4baecf5b7bdce35e2c272bba4646eefb398f4a403e977368bd477c513e1"
+  },
+  {
+    "file": "memory-25.webp",
+    "width": 2400,
+    "height": 1800,
+    "bytes": 488408,
+    "sha256": "1e882923691d225cc9f9e9a4d848dfb5eddc53b7a4bd03c485d0a8c137cc716b"
+  },
+  {
+    "file": "memory-26.webp",
+    "width": 1800,
+    "height": 2400,
+    "bytes": 472436,
+    "sha256": "eedb14130aa122a8d8e45d8a495a834c32fd5666a288d71ea8ff15e2db0ee6a0"
+  },
+  {
+    "file": "memory-27.webp",
+    "width": 1800,
+    "height": 2400,
+    "bytes": 546180,
+    "sha256": "1356d68e3a7fcefc4ffcbcc9edc71b2eb675ddddce9a2da9147c7b911b2f9d79"
+  }
+]
