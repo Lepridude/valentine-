@@ -80,7 +80,6 @@ const moments: Moment[] = [
   { date: 'НАША ИСТОРИЯ', title: 'Самые пиздатые вдвоём', caption: 'Ну какие же мы милые. И вообще — самые пиздатые. ♡', src: '/photos/memory-24.webp' },
   { date: 'НАША ИСТОРИЯ', title: 'Самые пиздатые вдвоём', caption: 'Ну какие же мы милые. И вообще — самые пиздатые. ♡', src: '/photos/memory-25.webp' },
   { date: 'НАША ИСТОРИЯ', title: 'Самые пиздатые вдвоём', caption: 'Ну какие же мы милые. И вообще — самые пиздатые. ♡', src: '/photos/memory-27.webp' },
-  { date: 'СЕГОДНЯ', title: 'Мы опять самые милые', caption: 'Ну какие же мы милые. И вообще — самые пиздатые. ♡', src: '/photos/memory-28.webp' },
 ]
 
 const timeline = [
