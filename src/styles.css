@@ -644,3 +644,89 @@ img { max-width: 100%; }
   .photo-modal{width:calc(100vw - 24px)}
   .photo-modal-image{max-height:54vh}
 }
+
+
+/* 2026-11-08: image rendering + visible hand-drawn romantic details */
+.memories .photo-card .moment-photo{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:100%!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  image-rendering:auto;
+  background:linear-gradient(135deg,#f4e5df,#ead4d0);
+}
+.memories .photo-card{isolation:isolate}
+.memories .photo-card:before{
+  content:"";
+  position:absolute;
+  z-index:2;
+  top:20px;right:20px;
+  width:34px;height:34px;
+  border:1px solid rgba(183,101,112,.5);
+  border-radius:50%;
+  pointer-events:none;
+}
+.memories .photo-card:after{
+  content:"";
+  position:absolute;inset:5px;
+  border:1px solid rgba(190,150,143,.24);
+  pointer-events:none;z-index:2;
+}
+.memories .photo-heart{z-index:3}
+body:before{
+  content:"♡     ✧          ♡";
+  position:fixed;z-index:-1;pointer-events:none;
+  top:18%;left:-8px;
+  color:rgba(183,101,112,.16);
+  font:clamp(24px,4vw,42px) 'Playfair Display',serif;
+  letter-spacing:24px;
+  transform:rotate(-14deg);
+}
+body:after{
+  content:"〰  ♡  〰";
+  position:fixed;z-index:-1;pointer-events:none;
+  right:-18px;bottom:17%;
+  color:rgba(183,101,112,.17);
+  font:32px 'Caveat',cursive;
+  transform:rotate(13deg);
+}
+.hero:after{
+  border-style:dashed;
+  box-shadow:0 0 0 28px rgba(183,101,112,.035),0 0 0 56px rgba(183,101,112,.025);
+}
+.dashboard-head:after,.section-heading:after{
+  content:"✧  ♡  〰";
+  align-self:flex-start;
+  color:rgba(183,101,112,.48);
+  font:24px 'Caveat',cursive;
+  letter-spacing:8px;
+  margin:4px 12px 0 auto;
+  pointer-events:none;
+}
+.timeline-section:after,.reasons-section:after,.letters-section:after{
+  content:"♡  ✧  ♡";
+  position:absolute;right:4%;top:8%;
+  color:rgba(183,101,112,.22);
+  font:30px 'Playfair Display',serif;
+  letter-spacing:14px;
+  transform:rotate(12deg);
+  pointer-events:none;
+}
+.photo-grid{position:relative}
+.photo-grid:after{
+  content:"♡  ─────  ✧  ─────  ♡";
+  display:block;grid-column:1/-1;text-align:center;
+  color:#c28c8d;opacity:.6;
+  font:16px 'Caveat',cursive;letter-spacing:5px;
+  padding:10px 0 0;
+}
+@media(max-width:900px){
+  .dashboard-head:after,.section-heading:after{display:none}
+  body:before{top:22%;left:-20px;font-size:26px}
+  body:after{right:-25px;bottom:12%;font-size:25px}
+  .memories .photo-card .moment-photo{object-fit:contain!important}
+}
