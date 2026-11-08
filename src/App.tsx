@@ -60,38 +60,17 @@ const notes: Note[] = [
   },
 ]
 
-const moments: Moment[] = [
-  {
-    date: 'НАЧАЛО',
-    title: 'С чего всё начиналось',
-    caption: 'Тот самый кадр, который хочется оставить в нашей истории.',
-    src: '/photos/014.webp',
-  },
-  {
-    date: 'НАШИ ДНИ',
-    title: 'Маленькие моменты',
-    caption: 'Не обязательно большое событие, чтобы день стал особенным.',
-    src: '/photos/022.webp',
-  },
-  {
-    date: 'ВМЕСТЕ',
-    title: 'Ещё один любимый кадр',
-    caption: 'Фотографии сохраняют то, к чему хочется возвращаться.',
-    src: '/photos/041.webp',
-  },
-  {
-    date: 'НАША ИСТОРИЯ',
-    title: 'Кусочек архива',
-    caption: 'Один из тех кадров, которые хочется пересматривать.',
-    src: '/photos/photobooth-pair.jpg',
-  },
-  {
-    date: 'ПОЛГОДА',
-    title: 'Мы',
-    caption: 'Шесть месяцев — и это только начало.',
-    src: '/photos/archive-collage.webp',
-  },
-]
+const moments: Moment[] = Array.from({ length: 27 }, (_, index) => {
+  const number = String(index + 1).padStart(2, '0')
+  return {
+    date: index === 0 ? 'НАЧАЛО' : index === 26 ? 'ПОЛГОДА' : 'НАША ИСТОРИЯ',
+    title: index === 0 ? 'С чего всё начиналось' : index === 26 ? 'И это только начало' : `Наш момент №${number}`,
+    caption: index === 0
+      ? 'Тот самый кадр, с которого хочется снова начать нашу историю.'
+      : 'Ещё одно воспоминание, которое теперь всегда будет с нами.',
+    src: `/photos/memory-${number}.webp`,
+  }
+})
 
 const timeline = [
   {
