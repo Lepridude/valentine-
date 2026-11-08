@@ -7,7 +7,7 @@ let failed = false
 
 try {
   const app = await readFile(appPath, 'utf8')
-  const referenced = [...app.matchAll(/\/photos\/(memory-\\d+\\.webp)/g)].map((match) => match[1])
+  const referenced = [...app.matchAll(/\/photos\/(memory-\d+\.webp)/g)].map((match) => match[1])
   const unique = [...new Set(referenced)]
   if (unique.length !== referenced.length) {
     console.error('DUPLICATE: a photo is referenced more than once in src/App.tsx')
