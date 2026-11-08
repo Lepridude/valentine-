@@ -375,6 +375,11 @@ function App() {
                 src={moment.src}
                 alt={moment.title}
                 loading={index < 2 ? 'eager' : 'lazy'}
+                decoding="async"
+                onError={(event) => {
+                  event.currentTarget.onerror = null
+                  event.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%23f8e9ed'/%3E%3Ctext x='50%25' y='48%25' text-anchor='middle' fill='%23bd8497' font-size='72'%3E%E2%99%A1%3C/text%3E%3Ctext x='50%25' y='60%25' text-anchor='middle' fill='%239b7180' font-size='24'%3E%D0%A4%D0%BE%D1%82%D0%BE%20%D1%81%D0%BA%D0%BE%D1%80%D0%BE%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C%3C/text%3E%3C/svg%3E"
+                }}
               />
               <div className="photo-caption">
                 <span>{moment.date}</span>
@@ -564,6 +569,11 @@ function App() {
                 className="photo-modal-image"
                 src={moments[photo].src}
                 alt={moments[photo].title}
+                decoding="async"
+                onError={(event) => {
+                  event.currentTarget.onerror = null
+                  event.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%23f8e9ed'/%3E%3Ctext x='50%25' y='48%25' text-anchor='middle' fill='%23bd8497' font-size='72'%3E%E2%99%A1%3C/text%3E%3Ctext x='50%25' y='60%25' text-anchor='middle' fill='%239b7180' font-size='24'%3E%D0%A4%D0%BE%D1%82%D0%BE%20%D1%81%D0%BA%D0%BE%D1%80%D0%BE%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C%3C/text%3E%3C/svg%3E"
+                }}
               />
 
               <div className="photo-modal-copy">
