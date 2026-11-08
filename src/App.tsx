@@ -478,7 +478,7 @@ function App() {
           <h2>
             И всё-таки
             <br />
-            <em>мой...</em>
+            <em>самое главное...</em>
           </h2>
 
           <div className="letter-photo-doodle" aria-hidden="true">

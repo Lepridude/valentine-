@@ -947,3 +947,24 @@ body:after{
 @media (prefers-reduced-motion: reduce) {
   .love-letter * { scroll-behavior: auto !important; }
 }
+
+
+/* Fix the anniversary letter seal: keep the full heart visible outside the paper edge. */
+.love-letter {
+  overflow: visible;
+}
+.love-letter .paper-seal {
+  bottom: -27px;
+  z-index: 3;
+}
+.letter-final {
+  padding-bottom: clamp(110px, 12vw, 150px);
+}
+@media (max-width: 600px) {
+  .letter-final {
+    padding-bottom: 104px;
+  }
+  .love-letter .paper-seal {
+    bottom: -22px;
+  }
+}
