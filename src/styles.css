@@ -730,3 +730,17 @@ body:after{
   body:after{right:-25px;bottom:12%;font-size:25px}
   .memories .photo-card .moment-photo{object-fit:contain!important}
 }
+
+
+/* 2026-11: compact, family-friendly captions for every memory. */
+.memories .photo-caption{padding:14px 8px 3px!important}
+.memories .photo-caption:before{width:24px!important;margin-bottom:9px!important}
+.memories .photo-caption span{font-size:8px!important;letter-spacing:.13em!important}
+.memories .photo-caption strong{font-size:clamp(16px,1.6vw,19px)!important;line-height:1.25!important;margin:6px 0 7px!important}
+.memories .photo-caption p{font-size:10px!important;line-height:1.5!important;color:#927d79!important}
+@media(max-width:700px){
+ .memories .photo-caption{padding:12px 7px 2px!important}
+ .memories .photo-caption strong{font-size:16px!important;line-height:1.25!important}
+ .memories .photo-caption p{font-size:9px!important;line-height:1.45!important}
+}
+@media(max-width:380px){.memories .photo-caption p{font-size:8.5px!important}}
