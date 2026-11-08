@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react'
-import firstMemoryPhoto from './firstMemoryPhoto.b64?raw'
 import { AnimatePresence, motion } from 'framer-motion'
 import {
   ArrowDown,
@@ -66,37 +65,37 @@ const moments: Moment[] = [
     date: 'НАЧАЛО',
     title: 'С чего всё начиналось',
     caption: 'Тот самый кадр, который хочется оставить в нашей истории.',
-    src: `data:image/webp;base64,${firstMemoryPhoto.trim()}`,
+    src: '/photos/photobooth-pair.jpg',
   },
   {
     date: 'НАШИ ДНИ',
     title: 'Маленькие моменты',
     caption: 'Не обязательно большое событие, чтобы день стал особенным.',
-    src: '/photos/014.webp',
+    src: '/photos/022.webp',
   },
   {
     date: 'ВМЕСТЕ',
     title: 'Ещё один любимый кадр',
     caption: 'Фотографии сохраняют то, к чему хочется возвращаться.',
-    src: '/photos/022.webp',
+    src: '/photos/041.webp',
   },
   {
     date: 'НАША ИСТОРИЯ',
     title: 'Кусочек архива',
     caption: 'Один из тех кадров, которые хочется пересматривать.',
-    src: '/photos/041.webp',
+    src: '/photos/photobooth-pair.webp',
   },
   {
     date: 'ПОЛГОДА',
     title: 'Мы',
     caption: 'Шесть месяцев — и это только начало.',
-    src: '/photos/photobooth-pair.webp',
+    src: '/photos/014.webp',
   },
   {
     date: 'АРХИВ',
     title: 'Всё, что хочется помнить',
     caption: 'Маленькая коллекция больших для нас воспоминаний.',
-    src: '/photos/archive-collage.webp',
+    src: '/photos/022.webp',
   },
 ]
 
