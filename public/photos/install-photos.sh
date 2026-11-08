@@ -7,13 +7,13 @@ if [[ ! -d .git ]]; then
 fi
 
 if [[ ! -d public/photos ]]; then
-  echo "public/photos was not found. Extract the deployment ZIP into the repository root first."
+  echo "public/photos was not found."
   exit 1
 fi
 
 count=$(find public/photos -maxdepth 1 -type f -name 'memory-*.webp' | wc -l | tr -d ' ')
-if [[ "$count" != "27" ]]; then
-  echo "Expected 27 WebP photos in public/photos, found: $count"
+if [[ "$count" == "0" ]]; then
+  echo "No memory-*.webp photos found in public/photos."
   exit 1
 fi
 
@@ -24,12 +24,13 @@ for file in public/photos/memory-*.webp; do
   }
 done
 
+echo "Validated $count WebP photo(s)."
 git add public/photos
 if git diff --cached --quiet; then
   echo "No photo changes to commit."
   exit 0
 fi
 
-git commit -m "assets: restore 27 original relationship photos"
+git commit -m "assets: sync relationship photos"
 git push origin main
-echo "Uploaded all 27 photos to GitHub. Wait for Cloudflare Pages deployment to finish."
+echo "Photo assets pushed to GitHub."

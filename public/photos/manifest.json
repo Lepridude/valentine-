@@ -131,5 +131,12 @@
     "height": 2400,
     "bytes": 546180,
     "sha256": "1356d68e3a7fcefc4ffcbcc9edc71b2eb675ddddce9a2da9147c7b911b2f9d79"
+  },
+  {
+    "file": "memory-28.webp",
+    "width": 1536,
+    "height": 2048,
+    "bytes": 156956,
+    "sha256": "bbb612cf787ec2d60e62e0de517cb8772b1b2588cabce34a83e93aac126c5e1a"
   }
 ]

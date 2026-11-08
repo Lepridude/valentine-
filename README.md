@@ -15,12 +15,16 @@ npm run dev
 npm run build
 ```
 
-## Personalization checklist
+## Current photo setup
 
-- Replace the demo date in `src/App.tsx`.
-- Add real photos and captions in the memories section.
-- Rewrite the six reasons and four envelope notes.
-- Rewrite the final letter in your own voice.
-- Add a real audio file and playback logic if music is needed.
+The gallery uses the selected photos from `public/photos`. The first memory is `memory-05.webp`, and the following memory cards use the personalized “самые пиздатые вдвоём” caption. Additional uploaded files can remain in the archive without being shown until they are referenced from `src/App.tsx`.
+
+Run `npm run check:photos` to verify that every gallery reference exists and is a valid WebP.
+
+## Personalization
+
+- Dates and relationship text live in `src/App.tsx`.
+- Gallery photos and captions are defined in the `moments` array.
+- The visual system and responsive layout live in `src/styles.css`.
 
 Built with React, TypeScript, Vite, Framer Motion and Lucide icons.

@@ -1,11 +1,9 @@
-# Valentine photo deployment bundle
+# Фото
 
-This bundle matches the current `src/App.tsx` gallery, which references:
-`/photos/memory-01.webp` through `/photos/memory-27.webp`.
+Папка содержит актуальный фотоархив сайта.
 
-## Install
-1. Unzip this archive into the root of your cloned `valentine-` repository (merge/replace if asked).
-2. From the repository root run `bash install-photos.sh`.
-3. The script verifies the 27 WebP files, commits `public/photos/`, and pushes to `origin main`.
-
-The files are converted from the uploaded originals. EXIF orientation is applied; no upscaling is performed; long edge is capped at 2400 px; WebP quality is 92. All files were reopened and fully decoded after export. This checks file integrity, not whether the original camera images themselves contain blur/noise.
+- Имена фотографий имеют формат `memory-XX.webp`.
+- Количество файлов не фиксировано: фотографии можно добавлять и удалять.
+- Сайт использует только фотографии, на которые есть ссылки в `src/App.tsx`.
+- После изменения фотоархива можно запустить `npm run check:photos` для проверки ссылок и WebP-файлов.
+- `manifest.json` содержит метаданные фотографий, используемых галереей.
