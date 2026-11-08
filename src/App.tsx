@@ -460,18 +460,32 @@ function App() {
       <section className="letter-final section-wrap">
         <div className="section-kicker">САМОЕ ГЛАВНОЕ</div>
 
-        <article className="final-paper">
+        <article className="final-paper love-letter">
+          <span className="paper-corner paper-corner-tl" aria-hidden="true" />
+          <span className="paper-corner paper-corner-br" aria-hidden="true" />
           <span className="paper-top">
-            21.05.2026 — 21.11.2026 · SIX MONTHS TOGETHER
+            <span>♡</span> 21.05.2026 — 21.11.2026 · SIX MONTHS TOGETHER <span>♡</span>
           </span>
+
+          <div className="letter-decoration letter-decoration-top" aria-hidden="true">
+            <span className="doodle-heart">♡</span>
+            <span className="doodle-spark">✧</span>
+            <span className="doodle-line">〰</span>
+          </div>
 
           <p className="script accent-script">моя хорошая,</p>
 
           <h2>
             И всё-таки
             <br />
-            <em>самое главное...</em>
+            <em>мой...</em>
           </h2>
+
+          <div className="letter-photo-doodle" aria-hidden="true">
+            <span className="doodle-polaroid doodle-polaroid-one">♡</span>
+            <span className="doodle-polaroid doodle-polaroid-two">✿</span>
+            <span className="doodle-bow">୨୧</span>
+          </div>
 
           <div className="letter-body">
             <p>
@@ -479,16 +493,54 @@ function App() {
               частью моей жизни.
             </p>
             <p>
-              Мне нравятся наши разговоры, прогулки, объятия, глупые шутки и даже самые обычные
-              моменты. Я рад, что всё это у нас есть.
+              Солнце, спасибо тебе огромное за всё это время, я правда очень рад, что именно мы с
+              тобой вместе.
             </p>
             <p>
-              Я хочу продолжать собирать с тобой воспоминания — большие, маленькие, смешные,
-              красивые и совершенно обычные.
+              Мне хочется и дальше встречаться с тобой, жить рядом, проводить вместе как можно
+              больше времени и однажды построить с тобой семью.
             </p>
-            <p>Спасибо тебе за эти полгода. Я очень тебя люблю.</p>
+            <p>
+              Мне нравятся наши разговоры, прогулки, объятия и даже самые обычные моменты, когда
+              мы просто находимся рядом.
+            </p>
+            <p>
+              Мне нравится смеяться с тобой над всякой глупостью и создавать наши маленькие
+              шутки, которые понятны только нам.
+            </p>
+            <p>
+              Я очень ценю всё, что между нами есть, потому что именно из таких моментов и
+              складывается наше счастье.
+            </p>
+            <p>
+              За эти шесть месяцев у нас уже появилось столько воспоминаний, которые мне хочется
+              хранить.
+            </p>
+            <p>И я хочу, чтобы таких воспоминаний становилось только больше.</p>
+            <p>
+              Хочу вместе с тобой переживать и большие события, и самые простые дни, которые потом
+              тоже будут казаться особенными.
+            </p>
+            <p>
+              Мне хочется продолжать гулять с тобой, обнимать тебя, смеяться, разговаривать обо
+              всём на свете и просто быть рядом.
+            </p>
+            <p>
+              Я не знаю, каким будет наше будущее, но точно знаю, что хочу встречать его именно с
+              тобой.
+            </p>
+            <p>
+              Спасибо тебе за то, что ты есть в моей жизни и делаешь её намного счастливее.
+            </p>
+            <p>
+              Я очень тебя люблю и хочу, чтобы эти шесть месяцев стали только началом нашей
+              большой истории.
+            </p>
           </div>
 
+          <div className="letter-decoration letter-decoration-bottom" aria-hidden="true">
+            <span>♡</span><span>✧</span><span>〰</span>
+          </div>
           <div className="letter-sign">
             <Heart size={20} fill="currentColor" />
           </div>
