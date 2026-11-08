@@ -65,7 +65,7 @@ const moments: Moment[] = [
     date: 'НАЧАЛО',
     title: 'С чего всё начиналось',
     caption: 'Тот самый кадр, который хочется оставить в нашей истории.',
-    src: '/photos/photobooth-pair.jpg',
+    src: '/photos/014.webp',
   },
   {
     date: 'НАШИ ДНИ',
@@ -83,19 +83,13 @@ const moments: Moment[] = [
     date: 'НАША ИСТОРИЯ',
     title: 'Кусочек архива',
     caption: 'Один из тех кадров, которые хочется пересматривать.',
-    src: '/photos/photobooth-pair.webp',
+    src: '/photos/photobooth-pair.jpg',
   },
   {
     date: 'ПОЛГОДА',
     title: 'Мы',
     caption: 'Шесть месяцев — и это только начало.',
-    src: '/photos/014.webp',
-  },
-  {
-    date: 'АРХИВ',
-    title: 'Всё, что хочется помнить',
-    caption: 'Маленькая коллекция больших для нас воспоминаний.',
-    src: '/photos/022.webp',
+    src: '/photos/archive-collage.webp',
   },
 ]
 
